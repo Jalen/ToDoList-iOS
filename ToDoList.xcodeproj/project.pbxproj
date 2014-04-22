@@ -19,6 +19,7 @@
 		6126922619063CAB00DC4F36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6126920E19063CAB00DC4F36 /* UIKit.framework */; };
 		6126922E19063CAB00DC4F36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6126922C19063CAB00DC4F36 /* InfoPlist.strings */; };
 		6126923019063CAB00DC4F36 /* ToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6126922F19063CAB00DC4F36 /* ToDoListTests.m */; };
+		6126923A190647B000DC4F36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61269239190647B000DC4F36 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		6126922B19063CAB00DC4F36 /* ToDoListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToDoListTests-Info.plist"; sourceTree = "<group>"; };
 		6126922D19063CAB00DC4F36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6126922F19063CAB00DC4F36 /* ToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListTests.m; sourceTree = "<group>"; };
+		61269239190647B000DC4F36 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				6126921319063CAB00DC4F36 /* InfoPlist.strings */,
 				6126921619063CAB00DC4F36 /* main.m */,
 				6126921819063CAB00DC4F36 /* ToDoList-Prefix.pch */,
+				61269239190647B000DC4F36 /* Main.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6126923A190647B000DC4F36 /* Main.storyboard in Resources */,
 				6126921519063CAB00DC4F36 /* InfoPlist.strings in Resources */,
 				6126921D19063CAB00DC4F36 /* Images.xcassets in Resources */,
 			);
