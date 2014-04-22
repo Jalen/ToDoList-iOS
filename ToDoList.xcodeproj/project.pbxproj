@@ -57,8 +57,8 @@
 		6126923D1906B2DD00DC4F36 /* MCHAddToDoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCHAddToDoItemViewController.m; sourceTree = "<group>"; };
 		6126923F1906B3F800DC4F36 /* MCHToDoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCHToDoListTableViewController.h; sourceTree = "<group>"; };
 		612692401906B3F800DC4F36 /* MCHToDoListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCHToDoListTableViewController.m; sourceTree = "<group>"; };
-		612692451906BBE000DC4F36 /* MCHToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCHToDoItem.h; path = ToDoList/DataModel/MCHToDoItem.h; sourceTree = "<group>"; };
-		612692461906BBE000DC4F36 /* MCHToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCHToDoItem.m; path = ToDoList/DataModel/MCHToDoItem.m; sourceTree = "<group>"; };
+		612692451906BBE000DC4F36 /* MCHToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCHToDoItem.h; sourceTree = "<group>"; };
+		612692461906BBE000DC4F36 /* MCHToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCHToDoItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +88,6 @@
 		612691FE19063CAA00DC4F36 = {
 			isa = PBXGroup;
 			children = (
-				612692451906BBE000DC4F36 /* MCHToDoItem.h */,
-				612692461906BBE000DC4F36 /* MCHToDoItem.m */,
 				6126921019063CAB00DC4F36 /* ToDoList */,
 				6126922919063CAB00DC4F36 /* ToDoListTests */,
 				6126920919063CAB00DC4F36 /* Frameworks */,
@@ -174,6 +172,8 @@
 		612692421906BB7F00DC4F36 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				612692451906BBE000DC4F36 /* MCHToDoItem.h */,
+				612692461906BBE000DC4F36 /* MCHToDoItem.m */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -399,7 +399,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ToDoList/ToDoList-Prefix.pch";
 				INFOPLIST_FILE = "ToDoList/ToDoList-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -412,7 +414,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ToDoList/ToDoList-Prefix.pch";
 				INFOPLIST_FILE = "ToDoList/ToDoList-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

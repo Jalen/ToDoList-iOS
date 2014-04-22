@@ -8,6 +8,8 @@
 
 #import "MCHToDoListTableViewController.h"
 
+#import "MCHAddToDoItemViewController.h"
+
 #import "../DataModel/MCHToDoItem.h"
 
 // Interface category
@@ -21,7 +23,12 @@
 @implementation MCHToDoListTableViewController
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
-    
+    MCHAddToDoItemViewController *source = [segue sourceViewController];
+    MCHToDoItem *item = source.todoItem;
+    if (item != nil) {
+        [self.todoItems addObject:item];
+        [self.tableView reloadData];
+    }
 }
 
 - (id)initWithStyle:(UITableViewStyle)style

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "../DataModel/MCHToDoItem.h"
+
 @interface MCHAddToDoItemViewController : UIViewController
+
+@property MCHToDoItem *todoItem;
 
 @end
