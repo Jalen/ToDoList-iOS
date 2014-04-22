@@ -8,7 +8,13 @@
 
 #import "MCHToDoListTableViewController.h"
 
+#import "../DataModel/MCHToDoItem.h"
+
+// Interface category
 @interface MCHToDoListTableViewController ()
+
+// private property
+@property NSMutableArray *todoItems;
 
 @end
 
@@ -31,6 +37,9 @@
 {
     [super viewDidLoad];
     
+    self.toolbarItems = [[NSMutableArray alloc] init];
+    [self loadInitialData];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -48,16 +57,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.todoItems count];
 }
 
 /*
@@ -119,5 +126,20 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Private Implementation
+- (void)loadInitialData {
+    MCHToDoItem *item1 = [[MCHToDoItem alloc] init];
+    item1.itemName = @"Buy milk";
+    [self.todoItems addObject:item1];
+    
+    MCHToDoItem *item2 = [[MCHToDoItem alloc] init];
+    item2.itemName = @"Buy book";
+    [self.todoItems addObject:item2];
+    
+    MCHToDoItem *item3 = [[MCHToDoItem alloc] init];
+    item3.itemName = @"Read a book";
+    [self.todoItems addObject:item3];
+}
 
 @end
