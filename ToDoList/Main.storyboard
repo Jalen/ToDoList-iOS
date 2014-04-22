@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add To Do Item View Controller - Add To-Do Item-->
         <scene sceneID="tPe-jz-10n">
             <objects>
-                <viewController id="6dC-jt-k1A" sceneMemberID="viewController">
+                <viewController id="6dC-jt-k1A" customClass="MCHAddToDoItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9ke-QQ-sx7"/>
                         <viewControllerLayoutGuide type="bottom" id="wPB-VF-XQv"/>
@@ -17,8 +17,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New to-do item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lTu-Yb-I0X">
-                                <rect key="frame" x="20" y="63" width="280" height="30"/>
+                                <rect key="frame" x="20" y="84" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="mvJ-Xd-cRB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -26,20 +29,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lTu-Yb-I0X" firstAttribute="leading" secondItem="0FV-rg-XFT" secondAttribute="leading" constant="20" id="7d0-f8-Dyx"/>
-                            <constraint firstItem="lTu-Yb-I0X" firstAttribute="top" secondItem="9ke-QQ-sx7" secondAttribute="bottom" constant="43" id="cLb-tZ-Ues"/>
+                            <constraint firstItem="lTu-Yb-I0X" firstAttribute="top" secondItem="9ke-QQ-sx7" secondAttribute="bottom" constant="20" id="cLb-tZ-Ues"/>
                             <constraint firstAttribute="trailing" secondItem="lTu-Yb-I0X" secondAttribute="trailing" constant="20" id="lWw-v8-R1B"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Add To-Do Item" id="tnB-Gz-iip">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cMT-Dc-Bk2"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Vxr-o8-q0R"/>
+                    </navigationItem>
                     <size key="freeformSize" width="320" height="568"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pnx-tK-Q2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736" y="-81"/>
+            <point key="canvasLocation" x="1262" y="-81"/>
         </scene>
-        <!--Table View Controller-->
+        <!--To Do List Table View Controller - My To-Do List-->
         <scene sceneID="i0o-R1-NAv">
             <objects>
-                <tableViewController id="Agm-62-0ja" sceneMemberID="viewController">
+                <tableViewController id="Agm-62-0ja" customClass="MCHToDoListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OkQ-Mf-koH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -276,7 +283,13 @@
                             <outlet property="delegate" destination="Agm-62-0ja" id="VJZ-Gk-GFR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="KPH-7w-bCw"/>
+                    <navigationItem key="navigationItem" title="My To-Do List" id="KPH-7w-bCw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wb0-Qh-Ahg">
+                            <connections>
+                                <segue destination="35J-Hc-FhS" kind="modal" id="ElV-sA-GaV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfM-x3-B5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -299,6 +312,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4XU-6J-zj1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-247" y="-87"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="y7b-kr-jXA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="35J-Hc-FhS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SsG-Ib-Mc4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6dC-jt-k1A" kind="relationship" relationship="rootViewController" id="R5Y-3T-2Ad"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VqO-8A-bfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="736" y="-81"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
